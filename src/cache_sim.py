@@ -21,7 +21,17 @@ def fifo(k, requests):
 
 
 def lru(k, requests):
-    pass
+    cache = OrderedDict()
+    misses = 0
+    for r in requests:
+        if r in cache:
+            cache.move_to_end(r)
+        else:
+            misses += 1
+            if len(cache) >= k:
+                cache.popitem(last=False)
+            cache[r] = True
+    return misses
 
 
 def optff(k, requests):
