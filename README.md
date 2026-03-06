@@ -2,7 +2,7 @@
 
 ## Team
 
-- **Student 1**: [Name] (UFID: [UFID])
+- **Student 1**: Alejandro Wakszol (UFID: 42739040)
 - **Student 2**: [Name] (UFID: [UFID])
 
 ## Requirements
