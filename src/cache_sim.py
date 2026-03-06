@@ -35,7 +35,28 @@ def lru(k, requests):
 
 
 def optff(k, requests):
-    pass
+    cache = set()
+    misses = 0
+    for i, r in enumerate(requests):
+        if r not in cache:
+            misses += 1
+            if len(cache) < k:
+                cache.add(r)
+            else:
+                farthest = -1
+                evict = None
+                for item in cache:
+                    try:
+                        next_use = requests.index(item, i + 1)
+                    except ValueError:
+                        evict = item
+                        break
+                    if next_use > farthest:
+                        farthest = next_use
+                        evict = item
+                cache.remove(evict)
+                cache.add(r)
+    return misses
 
 
 def main():
