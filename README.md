@@ -3,7 +3,7 @@
 ## Team
 
 - **Student 1**: Alejandro Wakszol (UFID: 42739040)
-- **Student 2**: [Name] (UFID: [UFID])
+- **Student 2**: Kaden Luangsouphom (UFID: 89641011)
 
 ## Requirements
 
@@ -13,16 +13,16 @@
 ## How to Run
 
 ```bash
-python3 src/cache_sim.py <input_file>
+python3 src/main.py < tests/in-files/<input_file>
 ```
 
 ### Example
 
 ```bash
-python3 src/cache_sim.py data/example.in
+python3 src/main.py < tests/in-files/example.in
 ```
 
-Expected output (see `data/example.out`):
+Expected output (see `tests/out-files/example.out`):
 
 ```
 FIFO  : 9
@@ -53,8 +53,7 @@ OPTFF : <number_of_misses>
 
 ```
 src/          Source code
-data/         Example input and output files
-tests/        Additional test inputs
+tests/        Example input and output files
 ```
 
 ## Assumptions
@@ -65,4 +64,4 @@ tests/        Additional test inputs
 
 ## Written Component
 
-*TODO*
+See PDF attached to Kaden Luangsouphom's Canvas submission.
