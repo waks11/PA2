@@ -11,9 +11,12 @@ def parse_input(lines):
     k_val, m_val = first_line.split()
 
     # Make cache requests into int variables
-    requests = stripped_lines[1].split()
-    for i in range(len(requests)):
-        requests[i] = int(requests[i])
+    if len(stripped_lines) < 2:
+        requests = None
+    else:
+        requests = stripped_lines[1].split()        
+        for i in range(len(requests)):
+            requests[i] = int(requests[i])
 
     return int(k_val), int(m_val), requests
     
