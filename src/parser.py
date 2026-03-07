@@ -15,5 +15,5 @@ def parse_input(lines):
     for i in range(len(requests)):
         requests[i] = int(requests[i])
 
-    return k_val, m_val, requests
+    return int(k_val), int(m_val), requests
     
